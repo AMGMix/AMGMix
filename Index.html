@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMGMix Concreto - Lajes Pré-moldadas e Concreto Usinado</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hero-background {
+            /* Imagem de fundo da seção Hero, com fallback para cor caso a imagem não carregue */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('shutterstock-752076598-26112024043502.jpg') no-repeat right bottom/cover;
+            background-color: #2563eb; /* Cor de fallback */
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #2563eb; /* Azul da marca */
+            margin-top: 8px;
+            border-radius: 9999px;
+        }
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .whatsapp-button {
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            background-color: #1DA851;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-700">AMGMix Concreto</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-600 hover:text-blue-700 transition duration-300">Início</a>
+                <a href="#sobre" class="text-gray-600 hover:text-blue-700 transition duration-300">Sobre Nós</a>
+                <a href="#servicos" class="text-gray-600 hover:text-blue-700 transition duration-300">Serviços</a>
+                <a href="#guia" class="text-gray-600 hover:text-blue-700 transition duration-300">Guia da Obra</a>
+                <a href="#contato" class="text-gray-600 hover:text-blue-700 transition duration-300">Contato</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <a href="#inicio" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition duration-300">Início</a>
+            <a href="#sobre" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition duration-300">Sobre Nós</a>
+            <a href="#servicos" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition duration-300">Serviços</a>
+            <a href="#guia" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition duration-300">Guia da Obra</a>
+            <a href="#contato" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition duration-300">Contato</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-background text-white flex items-center justify-center min-h-[600px] text-center p-6">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Soluções Completas para sua Obra em Espírito Santo</h1>
+                <p class="text-lg md:text-xl mb-8">Lajes Pré-moldadas e Concreto Usinado de alta qualidade para projetos de pequeno e médio porte nas principais cidades do ES.</p>
+                <a href="#contato" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Solicite seu Orçamento!
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="sobre" class="py-16 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title text-3xl font-bold text-gray-800 mb-12 inline-block">Sobre Nós</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center md:space-x-12">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="shutterstock_592096331.jpg" alt="Equipe de trabalho" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2 text-left">
+                        <p class="text-lg text-gray-700 mb-4">
+                            Somos uma empresa dedicada a fornecer soluções de construção civil de alta qualidade para obras de pequeno e médio porte em todo o Espírito Santo. Com foco em eficiência, segurança e compromisso, garantimos a excelência em cada projeto.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Atendemos as cidades de **Cariacica, Viana, Serra, Vitória, Guarapari e Vila Velha**, levando a você o melhor em lajes pré-moldadas e concreto usinado.
+                        </p>
+                        <p class="text-lg text-gray-700">
+                            Contamos com infraestrutura própria, incluindo um **caminhão betoneira** para transporte ágil do concreto e duas **bombas P30 de bombeamento de concreto**, o que nos permite atender suas demandas com rapidez e precisão.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title text-3xl font-bold text-gray-800 mb-12 inline-block">Nossos Serviços e Produtos</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Lajes Pré-moldadas Card -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Lajes Pré-moldadas</h3>
+                        <p class="text-gray-700 mb-4">
+                            As lajes pré-moldadas são ideais para otimizar o tempo e reduzir custos na sua obra. Oferecemos diversos tipos para atender às suas necessidades:
+                        </p>
+                        <ul class="text-left text-gray-700 space-y-2">
+                            <li>
+                                <strong class="text-blue-600">Laje Treliçada:</strong> Versátil e econômica, ideal para diversas aplicações.
+                                <ul class="list-disc pl-5 text-sm text-gray-600">
+                                    <li><strong class="text-green-600">Pontos Fortes:</strong> Leveza, fácil manuseio, menor escoramento, bom isolamento térmico e acústico (com enchimento).</li>
+                                    <li><strong class="text-red-600">Pontos Fracos:</strong> Pode exigir capa de concreto adicional, menor resistência a grandes cargas concentradas sem reforço.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong class="text-blue-600">Laje Painel Treliçado:</strong> Rapidez na montagem e dispensa formas.
+                                <ul class="list-disc pl-5 text-sm text-gray-600">
+                                    <li><strong class="text-green-600">Pontos Fortes:</strong> Rapidez de execução, superfície lisa inferior (dispensa chapisco), menor volume de concreto.</li>
+                                    <li><strong class="text-red-600">Pontos Fracos:</strong> Custo inicial um pouco mais elevado, transporte e manuseio exigem mais cuidado.</li>
+                                </ul>
+                            </li>
+                            <!-- Adicionar outros tipos se houver, como nervurada ou protendida se aplicável -->
+                        </ul>
+                    </div>
+
+                    <!-- Concreto Usinado Card -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Concreto Usinado de Alta Qualidade</h3>
+                        <p class="text-gray-700 mb-4">
+                            Entregamos concreto usinado fresco e com as especificações exatas para a sua obra, garantindo resistência e durabilidade.
+                        </p>
+                        <h4 class="text-xl font-semibold text-blue-600 mb-2">Sobre o FCK (Resistência Característica à Compressão do Concreto)</h4>
+                        <p class="text-gray-700 mb-4">
+                            O FCK é a principal medida de resistência do concreto. Ele indica a capacidade do concreto de suportar cargas sem se romper. Trabalhamos com diversas classes de FCK para atender a cada tipo de projeto, desde fundações até estruturas de lajes e pilares.
+                        </p>
+                        <h4 class="text-xl font-semibold text-blue-600 mb-2">Materiais do Concreto</h4>
+                        <p class="text-gray-700">
+                            Nosso concreto é produzido com matérias-primas selecionadas e em proporções controladas:
+                        </p>
+                        <ul class="text-left text-gray-700 space-y-2 list-disc pl-5">
+                            <li><strong>Cimento:</strong> Aglomerante que confere resistência.</li>
+                            <li><strong>Agregados (Areia e Brita):</strong> Conferem volume e estabilidade.</li>
+                            <li><strong>Água:</strong> Essencial para a reação de hidratação do cimento.</li>
+                            <li><strong>Aditivos:</strong> Podem ser utilizados para melhorar a trabalhabilidade, acelerar ou retardar a pega, ou aumentar a resistência.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Mercado de Obras Card -->
+                    <div class="card bg-white p-8 rounded-lg shadow-lg lg:col-span-1 md:col-span-2">
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-4">O Mercado de Obras de Pequeno e Médio Porte</h3>
+                        <p class="text-gray-700 mb-4">
+                            O segmento de obras de pequeno e médio porte, que inclui reformas residenciais, construções de casas, pequenas edificações comerciais e ampliações, é um setor vibrante e em constante crescimento no Espírito Santo.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Nós entendemos as necessidades específicas desse mercado: a busca por soluções eficientes, custos controlados, agilidade na entrega e a importância de um fornecedor confiável. Estamos preparados para ser o seu parceiro ideal, oferecendo produtos de qualidade e logística otimizada para que sua obra avance sem imprevistos.
+                        </p>
+                        <p class="text-gray-700">
+                            Nossa expertise e equipamentos próprios nos posicionam como a escolha certa para construtoras, empreiteiros e proprietários que buscam excelência em suas construções, garantindo que mesmo projetos menores tenham acesso a materiais e serviços de ponta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guia" class="py-16 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title text-3xl font-bold text-gray-800 mb-12 inline-block">Guia da Obra: Dicas Essenciais</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Card 1: Preparação da Obra -->
+                    <div class="card bg-gray-50 p-6 rounded-lg shadow-md text-left">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Como Preparar a Obra para Receber o Concreto</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li><strong>Verificar Armaduras e Caixarias:</strong> Certifique-se de que a armadura está corretamente posicionada e que as formas (caixarias) estão bem travadas, niveladas e vedadas para evitar vazamentos.</li>
+                            <li><strong>Limpeza:</strong> Garanta que a superfície e as formas estejam limpas, livres de detritos, óleo ou água em excesso.</li>
+                            <li><strong>Umectação:</strong> Molhe as formas e as superfícies de contato com o concreto (sem formar poças) para evitar a absorção da água do concreto, o que prejudicaria a hidratação.</li>
+                            <li><strong>Acesso e Nivelamento:</strong> Planeje o acesso do caminhão betoneira e da bomba de concreto. Tenha referências de nível para o lançamento do concreto.</li>
+                            <li><strong>Equipe e Ferramentas:</strong> Tenha uma equipe treinada e as ferramentas necessárias (réguas, vibradores, desempenadeiras) à mão para o lançamento e adensamento.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Cuidados Pós-Lançamento -->
+                    <div class="card bg-gray-50 p-6 rounded-lg shadow-md text-left">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Cuidados com o Concreto Após Finalizar a Laje</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li><strong>Cura do Concreto:</strong> Essencial para a resistência. Comece a curar o concreto assim que ele começar a endurecer (após a pega). Mantenha a laje úmida por pelo menos 7 dias (idealmente 28 dias) através de molhamento constante, manta de cura, ou filme plástico.</li>
+                            <li><strong>Proteção:</strong> Proteja a laje de chuvas fortes e sol intenso nas primeiras horas.</li>
+                            <li><strong>Evitar Cargas:</strong> Não aplique cargas pesadas sobre a laje antes do tempo de cura adequado (consulte o projeto estrutural).</li>
+                            <li><strong>Remoção do Escoramento:</strong> Siga rigorosamente o cronograma de remoção do escoramento e das formas, conforme indicado pelo engenheiro responsável. A remoção precoce pode causar danos graves.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Soluções para Vazamento -->
+                    <div class="card bg-gray-50 p-6 rounded-lg shadow-md text-left">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Soluções em Casos de Vazamento da Laje</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li><strong>Identificação da Origem:</strong> Primeiro, localize a fonte do vazamento. Pode ser falha na impermeabilização, trincas, problemas na tubulação ou rejuntes soltos.</li>
+                            <li><strong>Impermeabilização:</strong> A causa mais comum. A solução envolve refazer ou complementar a impermeabilização da laje (ex: manta asfáltica, argamassa polimérica, resinas).</li>
+                            <li><strong>Selagem de Trincas:</strong> Trincas podem ser seladas com resinas epóxi ou poliuretano injetáveis, dependendo da sua natureza (ativas ou passivas).</li>
+                            <li><strong>Reparo Estrutural:</strong> Em casos mais graves de fissuras estruturais, pode ser necessário um reforço ou reparo mais complexo, sempre com avaliação de um engenheiro.</li>
+                            <li><strong>Drenagem:</strong> Garanta que a laje tenha caimento adequado para escoamento da água, evitando acúmulo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-16 bg-blue-700 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title text-3xl font-bold mb-12 inline-block relative after:bg-white after:w-16 after:h-1 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:absolute after:rounded-full">Fale Conosco</h2>
+                <p class="text-lg mb-8">Estamos prontos para atender seu projeto. Entre em contato para um orçamento personalizado!</p>
+
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-xl text-gray-800">
+                    <form id="whatsappForm" class="space-y-6">
+    <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 text-left">Seu Nome</label>
+        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="João Silva">
+    </div>
+    <div>
+        <label for="endereco" class="block text-sm font-medium text-gray-700 text-left">Seu Endereço</label>
+        <input type="text" id="endereco" name="endereco" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Rua das Flores, 123">
+    </div>
+    <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700 text-left">Telefone / WhatsApp</label>
+        <input type="tel" id="phone" name="phone" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="(27) 9XXXX-XXXX">
+    </div>
+    <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 text-left">Sua Mensagem / Detalhes da Obra</label>
+        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Descreva brevemente sua necessidade..."></textarea>
+    </div>
+    <button type="button" onclick="enviarWhatsApp()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md shadow-md transition duration-300">
+        Enviar Mensagem
+    </button>
+</form>
+
+<script>
+    function enviarWhatsApp() {
+        // Coleta os valores do formulário
+        var nome = document.getElementById('name').value;
+        var endereco = document.getElementById('endereco').value;
+        var telefone = document.getElementById('phone').value;
+        var mensagem = document.getElementById('message').value;
+
+        // Número de telefone para onde a mensagem será enviada (inclua o código do país)
+        var numeroTelefone = '5527999999999'; // Exemplo: 55 (Brasil) 27 (DDD) 999999999 (número)
+
+        // Cria a mensagem completa
+        var textoMensagem = `Olá! Meu nome é ${nome}. Gostaria de solicitar um orçamento.
+
+- Endereço: ${endereco}
+- Telefone: ${telefone}
+- Mensagem: ${mensagem}`;
+
+        // Codifica a mensagem para o formato de URL
+        var textoCodificado = encodeURIComponent(textoMensagem);
+
+        // Constrói o URL do WhatsApp
+        var whatsappURL = `https://api.whatsapp.com/send?phone=${numeroTelefone}&text=${textoCodificado}`;
+
+        // Abre o link no navegador
+        window.open(whatsappURL, '_blank');
+    }
+</script>
+---
+<div class="mt-8 text-center">
+    <p class="text-xl font-semibold mb-4 text-blue-700">Entre em contato conosco:</p>
+    <div class="flex justify-center space-x-6">
+        <a href="tel:+5527999999999" class="call-button">
+            <img src="telefone.png" alt="Ícone de Telefone" class="w-10 h-15">
+        </a>
+        <a href="https://www.instagram.com/amgmix_2021" target="_blank" class="instagram-button">
+            <img src="instagram.png" alt="Ícone do Instagram" class="w-10 h-10">
+        </a>
+    </div>
+</div>

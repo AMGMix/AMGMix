@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMGMix Concreto - Lajes Pré-moldadas e Concreto Usinado</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -47,11 +46,28 @@
         .whatsapp-button:hover {
             background-color: #1DA851;
         }
+        /* Carousel specific styles */
+        .fade-animation {
+            animation-name: fadeEffect;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeEffect {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+        .mySlides {
+            display: none;
+        }
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header / Navbar -->
     <header class="bg-white shadow-md fixed w-full z-50">
         <nav class="container mx-auto px-6 py-1 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-2 text-blue-700"><img src="Logo AMG-MIX (2).png" alt="Logo AMGMix Concreto" class="h-12"><span class="text-2xl font-bold">AMGMix Concreto</span></a>
@@ -62,12 +78,10 @@
                 <a href="#guia" class="text-gray-600 hover:text-blue-700 transition duration-300">Guia da Obra</a>
                 <a href="#contato" class="text-gray-600 hover:text-blue-700 transition duration-300">Contato</a>
             </div>
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-700 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
             <a href="#inicio" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition duration-300">Início</a>
             <a href="#sobre" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition duration-300">Sobre Nós</a>
@@ -77,9 +91,8 @@
         </div>
     </header>
 
-    <main class="pt-20">
-        <!-- Hero Section -->
-        <section id="inicio" class="hero-background text-white flex items-center justify-center min-h-[600px] text-center p-6">
+    <main class="pt-15">
+        <section id="inicio" class="hero-background text-white flex items-center justify-center min-h-[700px] text-center p-6">
             <div class="max-w-4xl">
                 <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Soluções Completas para sua Obra em Espírito Santo</h1>
                 <p class="text-lg md:text-xl mb-8">Lajes Pré-moldadas e Concreto Usinado de alta qualidade para projetos de pequeno e médio porte nas principais cidades do ES.</p>
@@ -89,7 +102,6 @@
             </div>
         </section>
 
-        <!-- About Us Section -->
         <section id="sobre" class="py-16 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="section-title text-3xl font-bold text-gray-800 mb-12 inline-block">Sobre Nós</h2>
@@ -112,13 +124,11 @@
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="servicos" class="py-16 bg-gray-100">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="section-title text-3xl font-bold text-gray-800 mb-12 inline-block">Nossos Serviços e Produtos</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Lajes Pré-moldadas Card -->
                     <div class="card bg-white p-8 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-semibold text-blue-700 mb-4">Lajes Pré-moldadas</h3>
                         <p class="text-gray-700 mb-4">
@@ -139,11 +149,9 @@
                                     <li><strong class="text-red-600">Pontos Fracos:</strong> Custo inicial um pouco mais elevado, transporte e manuseio exigem mais cuidado.</li>
                                 </ul>
                             </li>
-                            <!-- Adicionar outros tipos se houver, como nervurada ou protendida se aplicável -->
-                        </ul>
+                            </ul>
                     </div>
 
-                    <!-- Concreto Usinado Card -->
                     <div class="card bg-white p-8 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-semibold text-blue-700 mb-4">Concreto Usinado de Alta Qualidade</h3>
                         <p class="text-gray-700 mb-4">
@@ -165,7 +173,6 @@
                         </ul>
                     </div>
 
-                    <!-- Mercado de Obras Card -->
                     <div class="card bg-white p-8 rounded-lg shadow-lg lg:col-span-1 md:col-span-2">
                         <h3 class="text-2xl font-semibold text-blue-700 mb-4">O Mercado de Obras de Pequeno e Médio Porte</h3>
                         <p class="text-gray-700 mb-4">
@@ -182,13 +189,11 @@
             </div>
         </section>
 
-        <!-- Guide Section -->
         <section id="guia" class="py-16 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="section-title text-3xl font-bold text-gray-800 mb-12 inline-block">Guia da Obra: Dicas Essenciais</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Card 1: Preparação da Obra -->
                     <div class="card bg-gray-50 p-6 rounded-lg shadow-md text-left">
                         <h3 class="text-xl font-semibold text-blue-700 mb-3">Como Preparar a Obra para Receber o Concreto</h3>
                         <ul class="list-disc pl-5 text-gray-700 space-y-2">
@@ -200,7 +205,6 @@
                         </ul>
                     </div>
 
-                    <!-- Card 2: Cuidados Pós-Lançamento -->
                     <div class="card bg-gray-50 p-6 rounded-lg shadow-md text-left">
                         <h3 class="text-xl font-semibold text-blue-700 mb-3">Cuidados com o Concreto Após Finalizar a Laje</h3>
                         <ul class="list-disc pl-5 text-gray-700 space-y-2">
@@ -211,7 +215,6 @@
                         </ul>
                     </div>
 
-                    <!-- Card 3: Soluções para Vazamento -->
                     <div class="card bg-gray-50 p-6 rounded-lg shadow-md text-left">
                         <h3 class="text-xl font-semibold text-blue-700 mb-3">Soluções em Casos de Vazamento da Laje</h3>
                         <ul class="list-disc pl-5 text-gray-700 space-y-2">
@@ -225,8 +228,19 @@
                 </div>
             </div>
         </section>
+        <section id="galeria" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title text-3xl font-bold text-gray-800 mb-12 inline-block">Galeria de Projetos</h2>
+                <div class="slideshow-container relative max-w-7xl w-full mx-auto bg-white shadow-xl rounded-xl overflow-hidden p-4">
+                    <div id="loading-indicator" class="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-700 text-lg z-10 hidden">
+                        Carregando imagens...
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Contact Section -->
+
+
         <section id="contato" class="py-16 bg-blue-700 text-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="section-title text-3xl font-bold mb-12 inline-block relative after:bg-white after:w-16 after:h-1 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:absolute after:rounded-full">Fale Conosco</h2>
@@ -254,36 +268,120 @@
         Enviar Mensagem
     </button>
 </form>
-
-<script>
+    <script>
+    // Script do botão do WhatsApp (sem alterações)
     function enviarWhatsApp() {
-        // Coleta os valores do formulário
         var nome = document.getElementById('name').value;
         var endereco = document.getElementById('endereco').value;
         var telefone = document.getElementById('phone').value;
         var mensagem = document.getElementById('message').value;
-
-        // Número de telefone para onde a mensagem será enviada (inclua o código do país)
-        var numeroTelefone = '5527999999999'; // Exemplo: 55 (Brasil) 27 (DDD) 999999999 (número)
-
-        // Cria a mensagem completa
+        var numeroTelefone = '5527999999999';
         var textoMensagem = `Olá! Meu nome é ${nome}. Gostaria de solicitar um orçamento.
 
 - Endereço: ${endereco}
 - Telefone: ${telefone}
 - Mensagem: ${mensagem}`;
-
-        // Codifica a mensagem para o formato de URL
         var textoCodificado = encodeURIComponent(textoMensagem);
-
-        // Constrói o URL do WhatsApp
         var whatsappURL = `https://api.whatsapp.com/send?phone=${numeroTelefone}&text=${textoCodificado}`;
-
-        // Abre o link no navegador
         window.open(whatsappURL, '_blank');
     }
+
+    // Script da galeria de projetos animada (corrigido)
+    const imagens = [];
+    // Tenta carregar as imagens de 1 a 70.
+    // O navegador tentará carregar, mas a lógica corrigida
+    // garantirá que apenas as imagens que existirem serão exibidas.
+    for (let i = 1; i <= 70; i++) {
+        imagens.push(`fotos/${i}.jpg`);
+    }
+
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    const totalImagensPorSlide = 6;
+    let slideAtual = 0;
+    let slidesGerados = [];
+
+    // Função para verificar se uma imagem existe
+    function verificarImagem(url) {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = url;
+        });
+    }
+
+    async function criarSlides() {
+        const imagensExistentes = [];
+        for (const imagem of imagens) {
+            if (await verificarImagem(imagem)) {
+                imagensExistentes.push(imagem);
+            }
+        }
+        
+        // Remove slides antigos
+        slideshowContainer.querySelectorAll('.mySlides').forEach(slide => slide.remove());
+        slidesGerados = [];
+
+        for (let i = 0; i < imagensExistentes.length; i += totalImagensPorSlide) {
+            const slideDiv = document.createElement('div');
+            slideDiv.className = 'mySlides fade-animation';
+            const gridDiv = document.createElement('div');
+            gridDiv.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4';
+
+            for (let j = 0; j < totalImagensPorSlide; j++) {
+                const indexDaImagem = i + j;
+                if (indexDaImagem < imagensExistentes.length) {
+                    const img = document.createElement('img');
+                    img.src = imagensExistentes[indexDaImagem];
+                    img.alt = `Foto ${indexDaImagem + 1}`;
+                    img.className = 'rounded-xl';
+                    gridDiv.appendChild(img);
+                }
+            }
+            slideDiv.appendChild(gridDiv);
+            slideshowContainer.appendChild(slideDiv);
+            slidesGerados.push(slideDiv);
+        }
+    }
+
+    function showSlides() {
+        if (slidesGerados.length === 0) {
+            // Se não houver slides, não faz nada
+            return;
+        }
+
+        slidesGerados.forEach(slide => {
+            slide.style.display = 'none';
+        });
+
+        slidesGerados[slideAtual].style.display = 'block';
+        slidesGerados[slideAtual].classList.add('fade-animation');
+
+        slideAtual++;
+        if (slideAtual >= slidesGerados.length) {
+            slideAtual = 0;
+        }
+
+        setTimeout(() => {
+            slidesGerados.forEach(slide => {
+                slide.classList.remove('fade-animation');
+            });
+        }, 1500);
+    }
+    
+    // Inicia a criação e exibição dos slides somente depois que o DOM estiver carregado
+    document.addEventListener('DOMContentLoaded', async () => {
+        await criarSlides();
+        if (slidesGerados.length > 0) {
+            showSlides();
+            setInterval(showSlides, 15000);
+        } else {
+            console.warn("Nenhuma imagem válida encontrada para a galeria.");
+            // Você pode adicionar uma mensagem aqui se desejar
+            // slideshowContainer.innerHTML = '<p class="text-center text-gray-500">Nenhum projeto disponível no momento.</p>';
+        }
+    });
 </script>
----
 <div class="mt-8 text-center">
     <p class="text-xl font-semibold mb-4 text-blue-700">Entre em contato conosco:</p>
     <div class="flex justify-center space-x-6">
@@ -295,5 +393,6 @@
         </a>
     </div>
 </div>
-
-
+    </main>
+</body>
+</html>
